@@ -3,31 +3,790 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>TBCS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
   <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/server.css">
+  <link rel="stylesheet" href="css/page.css">
+
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+<div class="ov">
+  <header class="header" data-aos="fade-down">
+    <a class="menu-opener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256">
+        <path d="M216,64V192H40V64Z" opacity="0.2"></path>
+        <path
+          d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+      </svg>
+    </a>
+    <div class="logo">
+      <!--<a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256">
+          <path
+            d="M240,160a40,40,0,0,1-40,40H152c-13.25,0-24-11.14-24-24.89s10.75-24.89,24-24.89a23.33,23.33,0,0,1,8.81,1.73A40,40,0,0,1,240,160Z"
+            opacity="0.2"></path>
+          <path
+            d="M200,112a48.18,48.18,0,0,0-44.66,30.4,31,31,0,0,0-3.34-.18c-17.65,0-32,14.76-32,32.89S134.35,208,152,208h48a48,48,0,0,0,0-96Zm0,80H152c-8.82,0-16-7.58-16-16.89s7.18-16.89,16-16.89a15,15,0,0,1,5.78,1.14,8,8,0,0,0,10.87-5.81A32,32,0,1,1,200,192ZM24,160v16a8,8,0,0,1-16,0V160A104,104,0,0,1,184.5,85.44a8,8,0,0,1-11.15,11.47A88,88,0,0,0,24,160Zm32,0v16a8,8,0,0,1-16,0V160a72,72,0,0,1,114.6-58,8,8,0,1,1-9.47,12.89A56,56,0,0,0,56,160Zm61.57-23.35A24,24,0,0,0,88,160v16a8,8,0,0,1-16,0V160a40,40,0,0,1,49.27-38.92,8,8,0,1,1-3.7,15.57Z"></path>
+        </svg>
+      </a>-->
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+      <a class="site-title"><strong>NutechVPN</strong>
+        <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"/>
+          <circle cx="176" cy="200" r="32" opacity="0.2"/>
+          <circle cx="176" cy="56" r="32" opacity="0.2"/>
+          <line x1="149.09" y1="73.3" x2="90.91" y2="110.7" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="16"/>
+          <line x1="90.91" y1="145.3" x2="149.09" y2="182.7" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="16"/>
+          <circle cx="64" cy="128" r="32" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="16"/>
+          <circle cx="176" cy="200" r="32" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="16"/>
+          <circle cx="176" cy="56" r="32" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="16"/>
+        </svg>-->
+      </a>
+    </div>
 
+    <nav class="menu-bez">
+      <li class="nav-items">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-items">
+        <a href="/services">Services</a>
+      </li>
+      <li class="nav-items">
+        <a href="/contact">Contact</a>
+      </li>
+    </nav>
+    <button class="button-57" role="button"><span class="text">Get access</span>
+      <span>Get access</span>
+    </button>
+  </header>
+  <nav class="mobile-menu">
+    <div class="menu-item">
+      <li class="nav-items">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-items">
+        <a href="/services">Services</a>
+      </li>
+      <li class="nav-items">
+        <a href="/contact">Contact</a>
+      </li>
+    </div>
+  </nav>
+  <!--Section 2-->
+  <div class="lay-container-2">
+    <div class="l2-column1" style="color:black;background: white;">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="site-category">about us</div>
+          <br>
+          <br>
+          <div class="lay-container-2-heading" style="font-weight: 500;">Unleash Global Connectivity: Lightning Fast
+            Speeds and Ultimate Security with Our Worldwide Server Network!
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row2">
+        <div class="row2-column1">
+          <button class="p-button-57" role="button"><span class="text">Get access</span><span>Get access
+        </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="column2" style="justify-content: normal; background: var(--site-background-color)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" fill="var(--site-accent-lite-color)"
+           viewBox="0 0 256 256">
+        <path class="path" stroke="var(--site-accent-color)" stroke-width="1"
+              d="M240,128a80,80,0,0,1-80,80H72A56,56,0,1,1,85.92,97.74l0,.1A80,80,0,0,1,240,128Z"
+              opacity="0.8"></path>
+        <path class="path" stroke="var(--site-accent-color)" stroke-width="2"
+              d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm0,160H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.11A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,72,72Zm37.66-93.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L144,148.69l42.34-42.35A8,8,0,0,1,197.66,106.34Z"></path>
+      </svg>
+      <!--
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+        <rect width="256" height="256" fill="none"/>
+        <path class="path" fill="var(--site-accent-color)"
+              d="M160.71,140.26a8.11,8.11,0,0,0-3.12-1.11l-22.82-3.08a8,8,0,0,0-8.38,4.67l-13.7,30.74a8,8,0,0,0,1.44,8.69l19.74,20.33a8,8,0,0,1,2,6.95l-3.17,16.44a96,96,0,0,0,80.41-51.41Z"
+              opacity="0.2"/>
+        <circle cx="128" cy="128" r="96" fill="none" stroke="var(--site-accent-color)" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2"/>
+        <path class="path"
+              d="M75.88,123.26,89.2,100a8,8,0,0,1,6.94-4h16.71a7.9,7.9,0,0,0,3.86-1L129,88.24a7.12,7.12,0,0,0,1.49-1.07l26.92-24.33A8,8,0,0,0,159,53l-10.5-18.81"
+              fill="none" stroke="var(--site-accent-color)" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"/>
+        <path class="path"
+              d="M67.78,53.23,56,81.08A8,8,0,0,0,55.88,87l11.5,30.67a8,8,0,0,0,5.81,5l21.43,4.61a8,8,0,0,1,5.52,4.33l3.8,7.87a8,8,0,0,0,7.2,4.51h13.8"
+              fill="none" stroke="var(--site-accent-color)" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"/>
+        <path class="path"
+              fill="var(--site-accent-color)"
+              d="M75.88,123.26,89.2,100a8,8,0,0,1,6.94-4h16.71a7.9,7.9,0,0,0,3.86-1L129,88.24a7.12,7.12,0,0,0,1.49-1.07l26.92-24.33A8,8,0,0,0,159,53l-10.5-18.81A96.62,96.62,0,0,0,128,32,95.61,95.61,0,0,0,67.78,53.23L56,81.08A8,8,0,0,0,55.88,87l11.5,30.67a8,8,0,0,0,5.81,5Z"
+              opacity="0.2"/>
+        <path class="path"
+              d="M213.09,172.48l-52.38-32.22a8.11,8.11,0,0,0-3.12-1.11l-22.82-3.08a8,8,0,0,0-8.38,4.67l-13.7,30.74a8,8,0,0,0,1.44,8.69l19.74,20.33a8,8,0,0,1,2,6.95l-3.17,16.44"
+              fill="none" stroke="var(--site-accent-color)" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"/>
+      </svg>
+      -->
+    </div>
+  </div>
+
+  <div class="separate-section">
+    Outline is resistant to some of the most sophisticated forms of blocking including DNS, content, and IP
+    blocking. Users report that Outline works even when other popular VPNs are blocked or fail to connect.
+    <img
+      src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/color/logo.png?raw=true"
+      alt=" "/>
+  </div>
+  <!--Section 1-->
+  <div class="lay-container">
+    <div class="column1" style="background: var(--site-accent-color);">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="lay-container-heading" style="color: var(--site-background-color);">Located in</div>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="row2-column1">
+          <div class="changing-text-container">
+            <div class="changing-text" id="textChange">United States</div>
+          </div>
+          <script>
+            const textArray = ["Europe", "Asia"];
+            const textElement = document.getElementById("textChange");
+            let currentIndex = 0;
+
+            function changeText() {
+              textElement.style.animation = "none";
+              setTimeout(() => {
+                textElement.style.animation = null;
+                textElement.textContent = textArray[currentIndex];
+                currentIndex = (currentIndex + 1) % textArray.length;
+              }, 10);
+            }
+
+            setInterval(changeText, 3000); // Change text every 3 seconds
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="column2" style="background: var(--site-accent-color);">
+      <div class="row1">
+        <div class="row1-column1">
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 256 256">
+
+            <path class="path" fill="var(--site-background-color)"
+                  d="M160.71,140.26a8.11,8.11,0,0,0-3.12-1.11l-22.82-3.08a8,8,0,0,0-8.38,4.67l-13.7,30.74a8,8,0,0,0,1.44,8.69l19.74,20.33a8,8,0,0,1,2,6.95l-3.17,16.44a96,96,0,0,0,80.41-51.41Z"
+                  opacity="0.2"/>
+            <circle cx="128" cy="128" r="96" fill="none" stroke="var(--site-background-color)" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"/>
+            <path class="path"
+                  d="M75.88,123.26,89.2,100a8,8,0,0,1,6.94-4h16.71a7.9,7.9,0,0,0,3.86-1L129,88.24a7.12,7.12,0,0,0,1.49-1.07l26.92-24.33A8,8,0,0,0,159,53l-10.5-18.81"
+                  fill="none" stroke="var(--site-background-color)" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"/>
+            <path class="path"
+                  d="M67.78,53.23,56,81.08A8,8,0,0,0,55.88,87l11.5,30.67a8,8,0,0,0,5.81,5l21.43,4.61a8,8,0,0,1,5.52,4.33l3.8,7.87a8,8,0,0,0,7.2,4.51h13.8"
+                  fill="none" stroke="var(--site-background-color)" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"/>
+            <path class="path"
+                  fill="var(--site-background-color)"
+                  d="M75.88,123.26,89.2,100a8,8,0,0,1,6.94-4h16.71a7.9,7.9,0,0,0,3.86-1L129,88.24a7.12,7.12,0,0,0,1.49-1.07l26.92-24.33A8,8,0,0,0,159,53l-10.5-18.81A96.62,96.62,0,0,0,128,32,95.61,95.61,0,0,0,67.78,53.23L56,81.08A8,8,0,0,0,55.88,87l11.5,30.67a8,8,0,0,0,5.81,5Z"
+                  opacity="0.2"/>
+            <path class="path"
+                  d="M213.09,172.48l-52.38-32.22a8.11,8.11,0,0,0-3.12-1.11l-22.82-3.08a8,8,0,0,0-8.38,4.67l-13.7,30.74a8,8,0,0,0,1.44,8.69l19.74,20.33a8,8,0,0,1,2,6.95l-3.17,16.44"
+                  fill="none" stroke="var(--site-background-color)" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="row2-column1">
+          <button class="button-57" role="button"><span class="text">Join us</span><span>Join us</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Section 3-->
+  <div class="lay-container-2">
+    <div class="l2-column1">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="site-category">why us</div>
+          <br>
+          <br>
+          <div class="lay-container-heading">Why Nutech ?</div>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="row2-column1">
+        </div>
+      </div>
+    </div>
+    <div class="l2-column1" style="color:white;background: #0d0d0e;">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="lay-container-2-heading">Nutech is powered by Outline VPN which is developed by google Jigsaw
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row2">
+        <div class="row2-column1">
+          <div class="lay-container-2-sub-heading">Which enables us to not only provide you services you need but enable
+            your team members learn cloud skills.
+          </div>
+        </div>
+        <div class="row2-column1">
+          <div class="lay-container-2-sub-heading">Which enables us to not only provide you services you need but enable
+            your team members learn cloud skills.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l2-column1" style="color:black;background: white;">
+    <div class="l3-row1">
+      <!--      <div class="row1-column1" style="background: white">-->
+      <!--        <div class="lay-container-2-heading">-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </div>
+
+    <div class="l3-row2">
+      <div class="l3-row2-column1">
+        <div style="background:none;justify-content: space-evenly;display: flex;">
+          <!--<img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/grayscale/logo.png?raw=true"
+            alt="Netzza Service by TBCS"/>
+          <img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/light/logo.png?raw=true"
+            alt="Netzza Service by TBCS"/>-->
+        </div>
+      </div>
+      <div class="l3-row2-column1" style="background:black">
+        <div style="background:black;justify-content: space-evenly;display: flex;">
+          <!--<img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/grayscale/logo.png?raw=true"
+            alt="Netzza Service by TBCS"/>-->
+          <img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/light/logo.png?raw=true"
+            alt=" "/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Section 3-->
+  <div class="lay-container-2">
+    <div class="l2-column1">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="site-category">our servers</div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+              <path
+                d="M24,184V161.13C24,103.65,70.15,56.2,127.63,56A104,104,0,0,1,232,160v24a8,8,0,0,1-8,8H32A8,8,0,0,1,24,184Z"
+                opacity="0.2"/>
+              <path
+                d="M24,184V161.13C24,103.65,70.15,56.2,127.63,56A104,104,0,0,1,232,160v24a8,8,0,0,1-8,8H32A8,8,0,0,1,24,184Z"
+                fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+              <line x1="128" y1="56" x2="128" y2="88" fill="none" stroke="black" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"/>
+              <line x1="104" y1="192" x2="168" y2="104" fill="none" stroke="black" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"/>
+              <line x1="200" y1="144" x2="230.78" y2="144" fill="none" stroke="black" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"/>
+              <line x1="25.39" y1="144" x2="56" y2="144" fill="none" stroke="black" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="row2-column1">
+        </div>
+      </div>
+    </div>
+    <div class="l2-column1" style="color:white;background: #0d0d0e;">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="lay-container-2-heading">Speed and Security
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row2">
+        <div class="row2-column1" style="display: flex;gap: 10px">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="var(--site-accent-lite-color)"
+               viewBox="0 0 256 256">
+            <path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"></path>
+            <path
+              d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"></path>
+          </svg>
+
+        </div>
+        <div class="row2-column1">
+          <div class="lay-container-2-sub-heading">Which enables us to not only provide you services you need but enable
+            your team members learn cloud skills.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l2-column1" style="color:black;background: white;">
+    <div class="l3-row1">
+      <!--      <div class="row1-column1" style="background: white">-->
+      <!--        <div class="lay-container-2-heading">-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </div>
+
+    <div class="l3-row2">
+      <div class="l3-row2-column1">
+        <div style="background:none;justify-content: space-evenly;display: flex;">
+          <!--<img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/grayscale/logo.png?raw=true"
+            alt="Netzza Service by TBCS"/>
+          <img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/light/logo.png?raw=true"
+            alt="Netzza Service by TBCS"/>-->
+        </div>
+      </div>
+      <div class="l3-row2-column1" style="background:black">
+        <div style="background:black;justify-content: space-evenly;display: flex;">
+          <!--<img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/grayscale/logo.png?raw=true"
+            alt="Netzza Service by TBCS"/>-->
+          <img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/light/logo.png?raw=true"
+            alt="Netzza Service by TBCS"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Section 4-->
+  <div class="lay-container-2">
+    <div class="l2-column1" style="color:black;background:#e0e0e0;">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="site-category">join us</div>
+          <br>
+          <br>
+          <div class="lay-container-2-heading">Our team consists of individuals with several years of experience working
+            on several public cloud platforms.
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row2">
+        <div class="row2-column1">
+          <div class="lay-container-2-sub-heading">Which enables us to not only provide you services you need but enable
+            your team members learn cloud skills.
+          </div>
+        </div>
+        <div class="row2-column1">
+          <div class="lay-container-2-sub-heading">Which enables us to not only provide you services you need but enable
+            your team members learn cloud skills.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--Section 7-->
+  <div class="lay-container-2">
+    <div class="l2-column1" style="color:black;background:#e0e0e0;">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="site-category">join us</div>
+          <br>
+          <br>
+          <!--
+                    <div class="flex w-full overflow-x-auto">
+                      <button
+                        class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-main_dark text-white"
+                        control-id="ControlID-1">
+                        <div class="min-h-[60px]">NVIDIA A40 GPU</div>
+                        <div class="flex w-full items-center gap-x-3">
+                          <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">48GB</p>
+                        </div>
+                      </button>
+                      <button
+                        class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+                        control-id="ControlID-2">
+                        <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+                        <div class="flex w-full items-center gap-x-3">
+                          <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">40GB</p>
+                          <p class="!leading-none caption">PCIE</p>
+                        </div>
+                      </button>
+                      <button
+                        class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+                        control-id="ControlID-3">
+                        <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+                        <div class="flex w-full items-center gap-x-3">
+                          <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                          <p class="!leading-none caption">PCIE</p>
+                        </div>
+                      </button>
+                      <button
+                        class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+                        control-id="ControlID-4">
+                        <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+                        <div class="flex w-full items-center gap-x-3">
+                          <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                          <p class="!leading-none caption">SXM</p>
+                        </div>
+                      </button>
+                      <button
+                        class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+                        control-id="ControlID-4">
+                        <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+                        <div class="flex w-full items-center gap-x-3">
+                          <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                          <p class="!leading-none caption">SXM</p>
+                        </div>
+                      </button>
+                      <button
+                        class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+                        control-id="ControlID-4">
+                        <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+                        <div class="flex w-full items-center gap-x-3">
+                          <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                          <p class="!leading-none caption">SXM</p>
+                        </div>
+                      </button>
+                      <button
+                        class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+                        control-id="ControlID-4">
+                        <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+                        <div class="flex w-full items-center gap-x-3">
+                          <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                          <p class="!leading-none caption">SXM</p>
+                        </div>
+                      </button>
+                      <button
+                        class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+                        control-id="ControlID-4">
+                        <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+                        <div class="flex w-full items-center gap-x-3">
+                          <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                          <p class="!leading-none caption">SXM</p>
+                        </div>
+                      </button>
+                    </div>
+                    -->
+        </div>
+      </div>
+      <br>
+      <div class="row2">
+        <div class="row2-column1">
+          <div class="lay-container-2-sub-heading">Which enables us to not only provide you services you need but enable
+            your team members learn cloud skills.
+          </div>
+        </div>
+        <div class="row2-column1">
+          <div class="lay-container-2-sub-heading">Which enables us to not only provide you services you need but enable
+            your team members learn cloud skills.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--Section 5-->
+  <div class="lay-container-2">
+    <div class="l2-column1" style="color:black;background:#e0e0e0;flex: 30%">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="site-category">contact us</div>
+          <br>
+          <br>
+          <div class="lay-container-heading">Secure access</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="l2-column2" style="color:black;background:#e0e0e0;">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="lay-container-2-heading">Deep knowledge in data and analytics workspace, Past working experience
+            directly with Public Cloud companies
+          </div>
+        </div>
+      </div>
+
+      <div class="row2" style="display: flex">
+
+        <div class="row2-column1">
+          <form>
+            <label for="fname">
+              <input type="email" id="fname" name="fname" placeholder="john@abc.com" autocomplete="off">
+            </label>
+          </form>
+          <div class="lay-container-2-sub-heading"></div>
+          <button class="p-button-57" role="button"><span class="text">Connect</span><span>Connect</span></button>
+
+          <div class="lay-container-2-sub-heading">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--Section 6-->
+  <div class="lay-container-2">
+    <div class="l2-column1">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="site-category">our servers</div>
+          <br>
+          <br>
+          <div class="lay-container-heading">What we offer</div>
+        </div>
+
+      </div>
+      <div class="row2">
+        <div class="row2-column1">
+
+        </div>
+
+      </div>
+    </div>
+    <div class="l2-column1" style="color:white;background: #0d0d0e;">
+      <div class="row1">
+        <div class="row1-column1">
+          <div class="lay-container-2-heading">Select instance
+          </div>
+        </div>
+      </div>
+      <div class="row1">
+        <div class="row1-column1">
+
+          <div class="flex w-full overflow-x-auto">
+            <button
+              class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-main_dark text-white"
+              control-id="ControlID-1">
+              <div class="min-h-[60px]">INDIA</div>
+              <div class="flex w-full items-center gap-x-3">
+                <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">50GB</p>
+                <p class="!leading-none caption">DATF</p>
+
+              </div>
+            </button>
+
+            <button
+              class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+              control-id="ControlID-2">
+              <div class="min-h-[60px]">SOUTH AMERICA</div>
+              <div class="flex w-full items-center gap-x-3">
+                <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">40GB</p>
+                <p class="!leading-none caption">DATF</p>
+              </div>
+            </button>
+
+            <!--<button
+              class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+              control-id="ControlID-3">
+              <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+              <div class="flex w-full items-center gap-x-3">
+                <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                <p class="!leading-none caption">PCIE</p>
+              </div>
+            </button>
+            <button
+              class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+              control-id="ControlID-4">
+              <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+              <div class="flex w-full items-center gap-x-3">
+                <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                <p class="!leading-none caption">SXM</p>
+              </div>
+            </button>
+            <button
+              class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+              control-id="ControlID-4">
+              <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+              <div class="flex w-full items-center gap-x-3">
+                <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                <p class="!leading-none caption">SXM</p>
+              </div>
+            </button>
+            <button
+              class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+              control-id="ControlID-4">
+              <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+              <div class="flex w-full items-center gap-x-3">
+                <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                <p class="!leading-none caption">SXM</p>
+              </div>
+            </button>
+            <button
+              class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
+              control-id="ControlID-4">
+              <div class="min-h-[60px]">NVIDIA A100 Tensor Core GPU</div>
+              <div class="flex w-full items-center gap-x-3">
+                <p class="bg-main_green/25 px-[0.9375rem] py-2 !leading-none caption">80GB</p>
+                <p class="!leading-none caption">SXM</p>
+              </div>
+            </button>-->
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row2">
+
+        <div class="row2-column1">
+          <div class="lay-container-2-sub-heading">Which enables us to not only provide you services you need but enable
+            your team members learn cloud skills.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l2-column1" style="color:black;background: white;">
+    <div class="l3-row1">
+      <!--      <div class="row1-column1" style="background: white">-->
+      <!--        <div class="lay-container-2-heading">-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </div>
+
+    <div class="l3-row2">
+      <div class="l3-row2-column1">
+        <div style="background:none;justify-content: space-evenly;display: flex;"></div>
+      </div>
+      <div class="l3-row2-column1" style="background:black">
+        <div style="background:black;justify-content: space-evenly;display: flex;">
+          <img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/grayscale/logo.png?raw=true"
+            alt=""
+          />
+          <!--
+          <img
+            src="https://github.com/Jigsaw-Code/outline-brand/blob/main/assets/powered_by_outline/light/logo.png?raw=true"
+            alt=""
+          />
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row-foot">
+        <div class="columnbig">
+          <div style="margin:0 0 10px 0;">
+            <a href="" class="site-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#a2a4a8" viewBox="0 0 256 256">
+                <path
+                  d="M240,160a40,40,0,0,1-40,40H152c-13.25,0-24-11.14-24-24.89s10.75-24.89,24-24.89a23.33,23.33,0,0,1,8.81,1.73A40,40,0,0,1,240,160Z"
+                  opacity="0.2"></path>
+                <path
+                  d="M200,112a48.18,48.18,0,0,0-44.66,30.4,31,31,0,0,0-3.34-.18c-17.65,0-32,14.76-32,32.89S134.35,208,152,208h48a48,48,0,0,0,0-96Zm0,80H152c-8.82,0-16-7.58-16-16.89s7.18-16.89,16-16.89a15,15,0,0,1,5.78,1.14,8,8,0,0,0,10.87-5.81A32,32,0,1,1,200,192ZM24,160v16a8,8,0,0,1-16,0V160A104,104,0,0,1,184.5,85.44a8,8,0,0,1-11.15,11.47A88,88,0,0,0,24,160Zm32,0v16a8,8,0,0,1-16,0V160a72,72,0,0,1,114.6-58,8,8,0,1,1-9.47,12.89A56,56,0,0,0,56,160Zm61.57-23.35A24,24,0,0,0,88,160v16a8,8,0,0,1-16,0V160a40,40,0,0,1,49.27-38.92,8,8,0,1,1-3.7,15.57Z"></path>
+              </svg>
+            </a>
+          </div>
+          <a class="" style="color:var(--site-dim-gray);">Nutech offers best VPN services for the best
+            people</a><br>
+          <div class="spacer"></div>
+          <a href="/terms" class="gray_text">Terms</a> |
+          <a href="/privacy" class="gray_text">Privacy</a> |
+          <a href="/disclaimer" class="gray_text">Disclaimer</a>
+          <div class="spacer"></div>
+        </div>
+        <div class="column" style="background-color:">
+          <h3 class="gray_text site-desc">Services</h3>
+          <br>
+          <hr style="border-bottom: 0.1px solid var(--site-dim-gray);">
+          <br>
+          <a href="" class="white_text ">Europe</a><br>
+          <a href="" class="white_text">Asia</a><br>
+          <a href="" class="white_text">United States</a><br>
+        </div>
+        <div class="column" style="background-color:">
+          <h3 class="gray_text site-desc">SOCIALS</h3>
+          <br>
+          <hr style="border-bottom: 0.1px solid var(--site-dim-gray);">
+          <br>
+          <a href="" class="white_text">
+            Instagram
+          </a><br>
+
+        </div>
+        <div class="column" style="background-color:">
+          <h3 class="gray_text site-desc">Support</h3>
+          <br>
+          <hr style="border-bottom: 0.1px solid var(--site-dim-gray);">
+          <br>
+          <a href=" " class="white_text">Contact</a><br>
+        </div>
+        <div class="spacer"></div>
+      </div>
+    </div>
+    <div class="copyright">
+      Copyright 2024 © NutechVPN
+
+
+    </div>
+  </footer>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const menuOpener = document.querySelector('.menu-opener');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body; // access to body
+
+    menuOpener.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+      body.style.overflow = 'hidden'; // disable scroll
+      event.stopPropagation(); // to prevent the document click event to be triggered
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.menu-opener') && e.target !== mobileMenu) {
+        mobileMenu.classList.remove('active');
+        body.style.overflow = 'auto'; // enable scroll
+      }
+    });
+  </script>
+</div>
 </body>
-
 </html>

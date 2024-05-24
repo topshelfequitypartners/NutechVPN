@@ -1,0 +1,120 @@
+{{#contentFor "styles"}}
+<link rel="stylesheet" type="text/css" href="{{asset "css/subscribe-form.css"}}" media="screen"/>
+{{/contentFor}}
+
+{{#if tags}}
+{{#foreach tags}}
+{{#if feature_image}}
+<img src="{{img_url feature_image size="s"}}" loading="lazy" alt="">
+{{/if}}
+{{/foreach}}
+{{/if}}
+
+<div id="submit-message" style="display: none;"></div>
+<p style="padding:10px;background-color: #f4f8fd;"> <img style="width: 32px;height: 32px" src="/assets/images/calendar-check-duotone.svg"/>&nbsp;&nbsp;<strong>{{@custom.webinar_date}}</strong>
+</p><a style="padding:5px 10px 10px 10px;display: block;background-color: #f4f8fd;"><img style="width: 38px;height: 38px;padding-bottom: 5px;" src="/assets/images/clock-duotone.svg"/><strong>&nbsp;{{@custom.webinar_timings}}</strong> <i
+  style="font-size: 12px;padding-left:5px">{{@custom.webinar_timezone}}</i>
+</a>
+
+<p class="webinar-excerpt">{{custom_excerpt}}</p>
+<form id="myForm">
+  <label for="fullname">Full Name</label>
+  <input type="text" id="fullname" name="fullname" placeholder="Your Name" required>
+  <label for="emailid">Email</label>
+  <input type="email" id="emailid" name="emailid" placeholder="Your email to communicate" required>
+  <button type="submit" class="subscribe__btsn m-button filled" style="border-radius: 0px;">Register</button>
+
+</form>
+
+
+<script>
+
+  const personalToken = 'patjLiTq5Fqcw78Jo.d29144d574ddfd6369c7ead55a3186199988da12b7c3b3bd060ffd0adef080e2';
+  const baseId = 'appJ0JrARiK8ZqbwK';
+  const tableName = 'tbl3lU5bzLitV7MYP';
+
+  const form = document.getElementById('myForm');
+  const submitMessage = document.getElementById('submit-message');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {};
+
+    for (const [key, value] of formData.entries()) {
+      data[key] = value;
+    }
+
+    // Regular expression for email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(data.emailid)) {
+      // Show the error message for invalid email
+      submitMessage.innerHTML = `
+      <div class="error">
+        <img src="https://img.icons8.com/color/48/000000/error--v1.png"/>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <p>Please enter a valid email address.</p>
+      </div>
+    `;
+      submitMessage.style.display = 'block';
+    } else {
+      fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${personalToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "records": [{"fields": {"fullname": data.fullname, "emailid": data.emailid}}]
+        })
+      })
+        .then(response => {
+          if (response.ok) {
+            // Show the success message and reset the form
+            form.reset();
+            submitMessage.innerHTML = `
+            <div class="success">
+              <img style="width: 48px;height: 48px" src="/assets/images/check-circle-duotone.svg"/>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+              <p>Thank you for registering, you will get a webinar invite shortly.</p>
+            </div>
+          `;
+            submitMessage.style.display = 'block';
+          } else {
+            // Show the error message
+            submitMessage.innerHTML = `
+            <div class="error">
+              <img src="https://img.icons8.com/color/48/000000/error--v1.png"/>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+              <p>There was an error submitting your registration. Please try again later.</p>
+            </div>
+          `;
+            submitMessage.style.display = 'block';
+          }
+        })
+        .catch(error => {
+          // Show the error message
+          submitMessage.innerHTML = `
+          <div class="error">
+            <img src="https://img.icons8.com/color/48/000000/error--v1.png"/>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <p>There was an error submitting your registration. Please try again later.</p>
+          </div>
+        `;
+          submitMessage.style.display = 'block';
+          console.error(error);
+        });
+    }
+  });
+
+</script>
+
+
+
+
