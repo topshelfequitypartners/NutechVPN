@@ -52,7 +52,7 @@ h1 {
 
 p {
   margin: 0 auto;
-  width: 280px;
+  /*width: 280px;*/
 }
 
 @media only screen and (max-width: 280px) {
@@ -409,7 +409,7 @@ li {
 
 @media (max-width: 480px) {
   .lay-container-heading {
-    font-size: 56px; /* Adjust as needed */
+    font-size: 44px; /* Adjust as needed */
   }
 }
 
@@ -775,4 +775,47 @@ input:focus {
 }
 .progress-steps li.active + li:after {
   background-color: var(--outline-color) !important;
+}
+/* Style the tab */
+.vertical-tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.vertical-tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.vertical-tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.vertical-tab button.active-tab {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tab-content {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
 }

@@ -2,17 +2,21 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="css/page.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+<!--  <link rel="stylesheet" href="css/page.css">-->
 
   <style>
-    * {box-sizing: border-box}
+    * {
+      box-sizing: border-box;
+    }
 
-    body {font-family: "Lato", sans-serif;}
+    body {
+      font-family: "Barlow", sans-serif;
+    }
 
     /* Style the tab */
-    .tab {
+    .vertical-tab {
       float: left;
       border: 1px solid #ccc;
       background-color: #f1f1f1;
@@ -21,7 +25,7 @@
     }
 
     /* Style the buttons inside the tab */
-    .tab button {
+    .vertical-tab button {
       display: block;
       background-color: inherit;
       color: black;
@@ -36,17 +40,17 @@
     }
 
     /* Change background color of buttons on hover */
-    .tab button:hover {
+    .vertical-tab button:hover {
       background-color: #ddd;
     }
 
     /* Create an active/current "tab button" class */
-    .tab button.active {
+    .vertical-tab button.active-tab {
       background-color: #ccc;
     }
 
     /* Style the tab content */
-    .tabcontent {
+    .tab-content {
       float: left;
       padding: 0px 12px;
       border: 1px solid #ccc;
@@ -61,23 +65,23 @@
 <h2>Vertical Tabs</h2>
 <p>Click on the buttons inside the tabbed menu:</p>
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Europe')" id="defaultOpen">Europe</button>
-  <button class="tablinks" onclick="openCity(event, 'Asia')">Asia</button>
-  <button class="tablinks" onclick="openCity(event, 'United States')">United States</button>
+<div class="vertical-tab">
+  <button class="tab-button" onclick="openCity(event, 'Europe')" id="defaultOpen">Europe</button>
+  <button class="tab-button" onclick="openCity(event, 'Asia')">Asia</button>
+  <button class="tab-button" onclick="openCity(event, 'United States')">United States</button>
 </div>
 
-<div id="Europe" class="tabcontent">
+<div id="Europe" class="tab-content">
   <h3>Europe</h3>
   <p>London is the capital city of England.</p>
 </div>
 
-<div id="Asia" class="tabcontent">
+<div id="Asia" class="tab-content">
   <h3>Asia</h3>
   <p>Paris is the capital of France.</p>
 </div>
 
-<div id="United States" class="tabcontent">
+<div id="United States" class="tab-content">
   <h3>United States</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
@@ -85,16 +89,16 @@
 <script>
   function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.getElementsByClassName("tab-button");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
     }
     document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.className += " active-tab";
   }
 
   // Get the element with id="defaultOpen" and click on it
