@@ -592,7 +592,7 @@ li {
 
 @media (max-width: 480px) {
   .changing-text {
-    font-size: 56px; /* Adjust font size for smaller screens */
+    font-size: 44px; /* Adjust font size for smaller screens */
   }
 }
 
