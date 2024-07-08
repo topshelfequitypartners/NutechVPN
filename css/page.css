@@ -819,3 +819,53 @@ input:focus {
   border-left: none;
   height: 300px;
 }
+
+
+   .terms-conditions {
+     font-family:var(--primary-font);
+     line-height: 1.6;
+     color: #333;
+     /*max-width: 800px;*/
+     margin: 0 auto;
+     padding: 20px;
+     /*background-color: #f9f9f9;*/
+     /*border: 1px solid #ddd;*/
+     border-radius: 5px;
+   }
+
+.terms-conditions h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+}
+
+.terms-conditions h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: 300;
+}
+
+.terms-conditions p {
+  margin-bottom: 15px;
+}
+
+.terms-conditions ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.terms-conditions ul li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.terms-conditions ul li::before {
+  content: "– ";
+  color: #333;
+  font-weight: bold;
+}
+
