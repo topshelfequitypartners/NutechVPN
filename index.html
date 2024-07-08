@@ -709,34 +709,31 @@
           <br>
           <div class="lay-container-heading">What we offer</div>
         </div>
-
       </div>
-
     </div>
-
   </div>
 
 
 
-  <!--Section 6-->
+  <!-- Section 6 servers -->
   <div class="lay-container-2">
     <div class="l2-column1" style="color:white;background: #0d0d0e;">
       <div class="row1">
         <div class="row1-column1">
-          <div class="lay-container-2-heading">Select Instance
-          </div>
+          <div class="lay-container-2-heading">Select Instance</div>
         </div>
       </div>
       <div class="row1">
         <div class="row1-column1">
           <div class="vertical-tab">
-            <button class="tab-button" onclick="openCity(event, 'Europe')" id="defaultOpen">Europe</button>
-            <button class="tab-button" onclick="openCity(event, 'Asia')">Asia</button>
-            <button class="tab-button" onclick="openCity(event, 'United States')">United States</button>
+            <button class="tab-button" onclick="openCity(event, 'Europe', 'EUROPE - SWEDEN')" id="defaultOpen">Europe</button>
+            <button class="tab-button" onclick="openCity(event, 'Asia', 'ASIA - INDIA')">Asia</button>
+            <button class="tab-button" onclick="openCity(event, 'United States', 'UNITED STATES - SOUTH AMERICA')">United States</button>
           </div>
 
           <div id="Europe" class="tab-content">
-            <h3>Europe</h3>
+            <br>
+            <h3 class="gray_text site-desc">Europe</h3>
             <br>
             <button
               class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-main_dark text-white"
@@ -751,7 +748,9 @@
           </div>
 
           <div id="Asia" class="tab-content">
-            <h3>Asia</h3>
+            <br>
+            <h3 class="gray_text site-desc">Asia</h3>
+            <br>
             <button
               class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
               control-id="ControlID-2">
@@ -764,7 +763,9 @@
           </div>
 
           <div id="United States" class="tab-content">
-            <h3>United States</h3>
+            <br>
+            <h3 class="gray_text site-desc">United States</h3>
+            <br>
             <button
               class="w-full border-b border-r border-t border-main_dark/[15%] p-3 text-left regular-m hover:bg-main_dark hover:text-white focus-visible:bg-main_dark focus-visible:text-white disabled:cursor-not-allowed disabled:opacity-50 [&amp;:first-of-type]:border-l flex min-w-[10rem] max-w-[10rem] flex-col gap-y-10 md:min-w-[8.8125rem] md:max-w-[8.8125rem] bg-white"
               control-id="ControlID-4">
@@ -784,13 +785,11 @@
       <div class="l2-column2" style="color:black;background:#e0e0e0;">
         <div class="row1">
           <div class="row1-column1">
-            <div class="lay-container-2-heading">EUROPE - SWEDEN
-            </div>
+            <div id="server-name" class="lay-container-2-heading"></div>
           </div>
         </div>
 
         <div class="row2" style="display: flex">
-
           <div class="row2-column1">
             <form>
               <label for="fname">
@@ -802,14 +801,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="l2-column1" style="color:black;background: white;">
-    <div class="l3-row1">
-      <!--      <div class="row1-column1" style="background: white">-->
-      <!--        <div class="lay-container-2-heading">-->
-      <!--        </div>-->
-      <!--      </div>-->
     </div>
   </div>
 
@@ -845,7 +836,7 @@
           <a href="" class="white_text">Asia</a><br>
           <a href="" class="white_text">United States</a><br>
         </div>
-        <div class="column" style="background-color:">
+        <!--<div class="column" style="background-color:">
           <h3 class="gray_text site-desc">SOCIALS</h3>
           <br>
           <hr style="border-bottom: 0.1px solid var(--site-dim-gray);">
@@ -853,8 +844,8 @@
           <a href="" class="white_text">
             Instagram
           </a><br>
+        </div>-->
 
-        </div>
         <div class="column" style="background-color:">
           <h3 class="gray_text site-desc">Support</h3>
           <br>
@@ -894,7 +885,7 @@
     });
   </script>
   <script>
-    function openCity(evt, cityName) {
+    function openCity(evt, cityName, serverName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tab-content");
       for (i = 0; i < tabcontent.length; i++) {
@@ -906,6 +897,7 @@
       }
       document.getElementById(cityName).style.display = "block";
       evt.currentTarget.className += " active-tab";
+      document.getElementById("server-name").textContent = serverName;
     }
 
     // Get the element with id="defaultOpen" and click on it
