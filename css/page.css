@@ -879,3 +879,11 @@ input:focus {
   font-weight: bold;
 }
 
+.success, .error{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+a {
+  color: black;
+}
